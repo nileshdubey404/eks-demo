@@ -54,17 +54,12 @@ pipeline {
             }
 
         }
-
         stage('Build Docker Image') {
 
             steps {
 
                 sh """
-                    docker buildx build \
-                    --platform linux/amd64 \
-                    -t ${ECR_URI}:${IMAGE_TAG} \
-                    -t ${ECR_URI}:latest \
-                    --push .
+                    docker build -t ${REPOSITORY}:${IMAGE_TAG} .
                 """
 
             }
