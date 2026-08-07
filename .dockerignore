@@ -1,0 +1,32 @@
+# Git metadata
+.git
+.gitignore
+
+# Package dependencies (install these inside the container instead)
+jspm_packages/
+.pnpm-store/
+
+# Build artifacts & logs
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Secrets and environment variables
+.env
+.env.*
+*.pem
+*.key
+
+# IDE settings
+.vscode/
+.idea/
+.DS_Store
+
+# Docker files
+Dockerfile
+docker-compose*
+.dockerignore
+
+# custom file
+K8S/
